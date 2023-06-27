@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(0, 255, 157);">
+    <div style="margin: auto;
+                margin-top: 100px;
+                width: 300px;">
+        {% for popper in poppers %}
+        <div style="border: 3px solid black;
+                        margin-bottom: 10px;
+                        text-align: center;">
+            <p>{{ popper }}</p>
+            <p>{{ popper.age }}</p>
+            <p>{{ popper.country }}</p>
+            <p>
+                <a href="/pop_singers/{{ popper.id }}" style="background-color: green; color: white;">
+                    Перейти к профилю
+                </a>
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

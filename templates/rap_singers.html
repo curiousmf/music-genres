@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(0, 255, 157);">
+    <div style="margin: auto;
+                width: 300px;">
+        {% for rapper in rappers %}
+        <div style="border: 3px solid black;
+                        margin-bottom: 10px;
+                        text-align: center;">
+            <p>{{ rapper }}</p>
+            <p>{{ rapper.age }}</p>
+            <p>{{ rapper.country }}</p>
+            <p>
+                <a href="/rap_singers/{{ rapper.id }}" style="background-color: green; color: white;">
+                    Перейти к профилю
+                </a>
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
